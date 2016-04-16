@@ -1,0 +1,1 @@
+collectiveSupp = new Mongo.Collection("commentsBernie");

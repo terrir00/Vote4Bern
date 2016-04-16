@@ -1,0 +1,38 @@
+<head>
+    La revolución
+ </head>
+
+<body>
+  <h1>
+    Vote for Bernie!
+  </h1>
+  {{> inputFromUser}}
+  {{> inputFromOthers}}
+
+</body>
+
+<template name="inputFromUser">
+
+  <p>Why do <b><u>you</u></b> support Bernie? {{supportFromFans}}</p>
+
+      <form class="new-comment">
+        <input type="text" name="text" placeholder="Share your thoughts" />
+      </form>
+
+  <button>SUBMIT</button>
+
+</template>
+
+<template name="inputFromOthers">
+  {{#with profile}}
+  {{comment}}
+  {{#with name}}
+    <p>{{first}} {{last}} </p>
+  {{/with}}
+  {{/with}}
+
+  <p>Responses from other supporters:</p>
+  <p>Bernie is the bomb!</p>
+  <p>Bernie's hair looks so good!</p>
+  <p>Bernie looks like that guy in disaster movies that keeps trying to warn everyone that the disaster is coming but nobody trusts him because his hair is messy and he keeps dropping his papers</p>
+</template>
